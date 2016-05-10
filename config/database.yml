@@ -1,3 +1,4 @@
 ---
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
