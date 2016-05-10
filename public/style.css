@@ -1,0 +1,77 @@
+body {
+  font-family: "Poiret One", cursive, sans-serif;
+  text-align: center;
+}
+
+#container {
+  width: 800px;
+  margin: 0px auto;
+}
+
+#header {
+  border-bottom: 1px solid #ededed;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+
+#header #title {
+  font-size: 75pt;
+  text-align: center;
+  font-family: "Special Elite", cursive;
+}
+
+#content .gallery {
+  border: 1px solid #ededed;
+  margin: 20px 25px;
+  padding: 10px 20px;
+}
+
+#content .gallery-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+  height: 160px;
+  width: 195px;
+  overflow: hidden;
+}
+
+#content .gallery-item img {
+  width: 100%;
+}
+
+#content .gallery-item .caption {
+  position: absolute;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  transition: background 0.3s linear;
+}
+
+#content .gallery-item .caption:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+#footer {
+  border-top: 1px solid #ededed;
+  margin-top: 20px;
+  padding: 20px 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  #container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .gallery-item:focus {
+    width: 100% !important;
+  }
+
+  #header #title {
+    font-size: 30pt;
+  }
+}

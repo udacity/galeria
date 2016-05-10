@@ -1,0 +1,18 @@
+<div class="gallery">
+  <h1 class="gallery-title">High Art</h1>
+  <h2 class="gallery-description">A display of all of your most impactful pieces.</h2>
+  <h3>
+    <form method="post" >
+      <input value="New Art Piece" type="submit" />
+    </form>
+  </h3>
+  <% @images.each do |i| %>
+  <div class="gallery-item">
+    <a href="/photo/<%= i[:id] %>">
+      <span class="caption">
+      </span>
+    </a>
+    <img src="<%= i[:url] %>" alt="<%= i[:title] %>" />
+  </div>
+  <% end %>
+</div>
