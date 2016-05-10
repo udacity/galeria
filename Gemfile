@@ -1,2 +1,5 @@
 source 'https://rubygems.org'
-gem 'sinatra'
+gem 'activerecord', require: 'active_record'
+gem 'sqlite3'
+gem 'sinatra-activerecord'
+gem 'rake'
