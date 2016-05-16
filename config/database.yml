@@ -1,4 +1,14 @@
 development:
   adapter: postgresql
+  encoding: unicode
   database: dev
+  pool: 5
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: prod
+  pool: 5
   host: localhost
