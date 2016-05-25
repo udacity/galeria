@@ -2,8 +2,9 @@
   <h1 class="gallery-title">High Art</h1>
   <h2 class="gallery-description">A display of all of your most impactful pieces.</h2>
   <h3>
-    <form method="post" >
-      <input value="New Art Piece" type="submit" />
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload New Art Piece">
     </form>
   </h3>
   <% @images.each do |i| %>
@@ -12,7 +13,7 @@
       <span class="caption">
       </span>
     </a>
-    <img src="<%= i.url %>" alt="<%= i.title %>" />
+    <img src="<%= i.url %>"/>
   </div>
   <% end %>
 </div>

@@ -36,6 +36,20 @@ body {
   overflow: hidden;
 }
 
+#content .gallery-large {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 5px;
+  height: 500px;
+  width: 600px;
+  overflow: hidden;
+}
+
+#content .gallery-large img {
+  width: 100%;
+}
+
 #content .gallery-item img {
   width: 100%;
 }
