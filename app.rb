@@ -24,17 +24,20 @@ get '/photo/:id' do
 end
 
 post '/' do
+  if params[:file]
+    @filename = params[:file][:filename]
+    file = params[:file][:tempfile]
 
-  @filename = params[:file][:filename]
-  file = params[:file][:tempfile]
+    File.open("./public/#{@filename}", 'wb') do |f|
+      f.write(file.read)
+      Image.create(
+      url: "/" + @filename,
+      title: @filename
+      )
+    end
 
-  File.open("./public/#{@filename}", 'wb') do |f|
-    f.write(file.read)
-    Image.create(
-    url: "/" + @filename,
-    title: @filename
-    )
+    redirect '/'
+  else
+    redirect '/'
   end
-
-  redirect '/'
 end
