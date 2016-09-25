@@ -8,11 +8,11 @@
   </h3>
   <% @images.each do |i| %>
   <div class="gallery-item">
-    <a href="/photo/<%= i[:id] %>">
+    <a href="/photo/<%= i.id %>">
       <span class="caption">
       </span>
     </a>
-    <img src="<%= i[:url] %>" alt="<%= i[:title] %>" />
+    <img src="<%= i.url %>" alt="<%= i.title %>" />
   </div>
   <% end %>
 </div>

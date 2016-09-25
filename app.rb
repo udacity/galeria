@@ -1,26 +1,24 @@
 require 'sinatra'
 require 'bundler'
-
-id_counter = 1
-images = []
-
-post '/' do
-  img_num = rand(0..1084)
-  images << {
-    id: id_counter,
-    url: "https://unsplash.it/600/500?image=#{img_num}",
-    title: "Picture number #{id_counter}"
-  }
-  id_counter += 1
-  redirect '/'
-end
+require 'active_record'
+require_relative 'models/image'
+require_relative 'config/environments'
 
 get '/' do
-  @images = images
+  @images = Image.all
   erb :index
 end
 
+post '/' do
+  img_num = rand(0..1084)
+  Image.create(
+    url: "https://unsplash.it/600/500?image=#{img_num}",
+    title: "Image number #{img_num}"
+  )
+  redirect '/'
+end
+
 get '/photo/:id' do
-  @image = images.select { |img| img[:id] == params[:id].to_i }.first
+  @image = Image.find(params[:id])
   erb :single
 end
