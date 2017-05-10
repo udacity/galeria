@@ -1,0 +1,23 @@
+Desplegar aplicaciones con Heroku
+
+-----------------Lección 01
+
+Mapa del curso
+ +++ L-01
+    -Que es el despliegue?
+  *Cuando desarrollamos una aplicacion lo solemos hacer de manera local.
+De esta forma solo nosotros podemos acceder a la misma, y cuando la tenemos lista
+la subimos a un servidor para que se pueda acceder desde cualquier sitio. 
+    -Que es Heroku?
+ *Heroku nos brinda la posibilidad de poder subir la aplicacion a una plataforma
+desde el inicio del desarrollo hasta su finalizacion con control de versiones en su fase de desarrollo hasta su finalizacion.
+ Todo esto se logra con tres servicios diferenciados:
+   1/Plataforma como sevicio o (PaaS)
+   2/Infraestructura como servicio o (IaaS)
+   3/Software como servicio o (SaaS)
+    -Instalar e inicializacion
+    -Despliegue
+ +++ L-02
+    -Abrir el capó
+    -Desafios comunes
+    -Como superar desafios 
